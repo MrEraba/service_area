@@ -27,6 +27,7 @@ from drf_yasg import openapi
 
 from accounts.api.router import router as account_router
 from areas.api.router import router as area_router
+from providers.api.router import router as provider_router
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -34,7 +35,7 @@ schema_view = get_schema_view(
       default_version='v1',
       description="Description",
       terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
+      contact=openapi.Contact(email="ivan_almanza_@hotmail.com"),
       license=openapi.License(name="BSD License"),
    ),
    public=True,
@@ -47,6 +48,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(account_router.urls)),
     path('api/', include(area_router.urls)),
+    path('api/', include(provider_router.urls)),
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

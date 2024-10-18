@@ -4,9 +4,9 @@ from rest_framework_gis.serializers import Polygon
 from ..models import Area
 
 
-class AreaSerializer(serializers.HyperlinkedModelSerializer):
+class AreaSerializer(serializers.ModelSerializer):
     region = Polygon()
 
     class Meta:
         model = Area
-        fields = ['id', 'name', 'region', 'owner', 'url']
+        fields = ['id', 'name', 'region', 'provider']

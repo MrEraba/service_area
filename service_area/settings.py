@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     # Local Apps
     'accounts.apps.AccountsConfig',
     'areas.apps.AreasConfig',
+    'providers.apps.ProvidersConfig',
 ]
 
 MIDDLEWARE = [
