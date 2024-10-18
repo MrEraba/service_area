@@ -1,15 +1,24 @@
 # MOZIO Area API
 
 ## Documentation
-For documentation visit  `/docs/`
+For *OPEN API* documentation visit  
+```json
+http://35.175.226.92:8080/docs/
+```
 
-## Examples
-### Search if a given Point belongs to a service area
+## Manage Providers
+```json
+http://35.175.226.92:8080/api/providers/
+```
 
-For Point Lat=10, Lng=10 
-`/api/areas/?search_by=10,10`
 
-### Area creation example
+## Search a Point in all Areas example
+
+### 1. Area creation example
+
+```json
+http://35.175.226.92:8080/api/areas/
+```
 
 ```json
 {
@@ -46,7 +55,12 @@ For Point Lat=10, Lng=10
     "owner": 1
 }
 ```
+### 2. Search if a given Point belongs to a service area
 
+For Point Lat=10, Lng=10 
+```json
+http://35.175.226.92:8080/api/areas/?search_by=10,10
+```
 ## List of all Areas
 
 For a List of all Areas please go to `/api/areas/`
